@@ -428,21 +428,21 @@ ventas@luminarias.com.mx</p>
     const telefono = document.getElementById("telefono").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    const numero = "524422333003"; // número de WhatsApp con código de país (52 = México)
+    const numero = "524422333003";
     const texto = `Hola, mi nombre es ${nombre}.%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
 
-    // Evento de conversión de Google Ads
+    // Enviar evento de conversión al hacer clic
     gtag('event', 'conversion', {
-      'send_to': 'AW-952929075/3YpbCNe39OwaELOWssYD',
+      'send_to': 'AW-952929075/ijRWCMLX7_AaELOWssYD',
       'value': 1.0,
       'currency': 'MXN'
     });
 
-    // Abrir WhatsApp con un pequeño retraso para asegurar el registro de conversión
+    // Abrir WhatsApp después de 200 ms para asegurar envío del evento
     setTimeout(() => {
       const url = `https://wa.me/${numero}?text=${texto}`;
       window.open(url, "_blank");
-    }, 200); // espera 200 ms
+    }, 200);
   }
 </script>
 <div style="display:none;">
