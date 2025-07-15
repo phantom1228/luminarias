@@ -421,7 +421,7 @@ ventas@luminarias.com.mx</p>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
-    <script>
+<script>
   function enviarPorWhatsApp() {
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
@@ -431,8 +431,18 @@ ventas@luminarias.com.mx</p>
     const numero = "524422333003"; // número de WhatsApp con código de país (52 = México)
     const texto = `Hola, mi nombre es ${nombre}.%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
 
-    const url = `https://wa.me/${numero}?text=${texto}`;
-    window.open(url, "_blank");
+    // Evento de conversión de Google Ads
+    gtag('event', 'conversion', {
+      'send_to': 'AW-952929075/3YpbCNe39OwaELOWssYD',
+      'value': 1.0,
+      'currency': 'MXN'
+    });
+
+    // Abrir WhatsApp con un pequeño retraso para asegurar el registro de conversión
+    setTimeout(() => {
+      const url = `https://wa.me/${numero}?text=${texto}`;
+      window.open(url, "_blank");
+    }, 200); // espera 200 ms
   }
 </script>
 <div style="display:none;">
