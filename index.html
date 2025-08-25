@@ -6,54 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO -->
-<title>Luminarias LED Industriales y Viales | Jof México</title>
-<meta name="description" content="Fabricamos luminarias LED industriales, viales y solares en México. Soluciones en interconexión industrial, campanas de alto rendimiento y alumbrado público.">
-<meta name="author" content="Jof México">
+  <!-- SEO -->
+  <title>Luminarias LED Industriales y Viales | Jof México</title>
+  <meta name="description" content="Fabricamos luminarias LED industriales, viales y solares en México. Soluciones en interconexión industrial, campanas de alto rendimiento y alumbrado público.">
+  <meta name="author" content="Jof México">
 
-<!-- Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="Luminarias LED Industriales en México | Jof México" />
-<meta property="og:description" content="Soluciones en iluminación LED industrial, solar y vial. Envío a toda la República Mexicana." />
-<meta property="og:image" content="https://luminarias.com.mx/images/og-luminarias-industriales.png">
-<meta property="og:url" content="https://luminarias.com.mx" />
-<meta property="og:type" content="website" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://luminarias.com.mx/" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-952929075">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Luminarias LED Industriales en México | Jof México" />
+  <meta property="og:description" content="Soluciones en iluminación LED industrial, solar y vial. Envío a toda la República Mexicana." />
+  <meta property="og:image" content="https://luminarias.com.mx/images/og-luminarias-industriales.png">
+  <meta property="og:url" content="https://luminarias.com.mx" />
+  <meta property="og:type" content="website" />
 
-  gtag('config', 'AW-952929075');
-</script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luminarias LED Industriales en México | Jof México" />
+  <meta name="twitter:description" content="Iluminación LED industrial, vial y solar con alta eficiencia energética." />
+  <meta name="twitter:image" content="https://luminarias.com.mx/images/og-image.png" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Luminarias LED Industriales en México | Jof México" />
-<meta name="twitter:description" content="Iluminación LED industrial, vial y solar con alta eficiencia energética." />
-<meta name="twitter:image" content="https://luminarias.com.mx/images/og-image.png" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 
-<!-- CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-<!-- IE Support -->
+  <!-- IE Support -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
 <!-- body -->
 
 <body class="main-layout">
@@ -421,28 +414,18 @@ ventas@luminarias.com.mx</p>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
-<script>
+    <script>
   function enviarPorWhatsApp() {
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
     const telefono = document.getElementById("telefono").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    const numero = "524422333003";
+    const numero = "524422333003"; // número de WhatsApp con código de país (52 = México)
     const texto = `Hola, mi nombre es ${nombre}.%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
 
-    // Enviar evento de conversión al hacer clic
-    gtag('event', 'conversion', {
-      'send_to': 'AW-952929075/ijRWCMLX7_AaELOWssYD',
-      'value': 1.0,
-      'currency': 'MXN'
-    });
-
-    // Abrir WhatsApp después de 200 ms para asegurar envío del evento
-    setTimeout(() => {
-      const url = `https://wa.me/${numero}?text=${texto}`;
-      window.open(url, "_blank");
-    }, 200);
+    const url = `https://wa.me/${numero}?text=${texto}`;
+    window.open(url, "_blank");
   }
 </script>
 <div style="display:none;">
