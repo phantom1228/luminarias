@@ -34,24 +34,32 @@
   <!-- Datos de contacto estructurados -->
   <meta name="email" content="ventas@panelessolaresmexico.com.mx" />
 
-  <!-- Google Ads Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-952929075"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-952929075');
-  </script>
+<!-- ETIQUETA GLOBAL DE GOOGLE (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-952929075"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- EVENTO DE CONVERSIÓN CORRECTO -->
-  <script>
-      function registrarConversion() {
-          gtag('event', 'conversion', {
-              'send_to': 'AW-952929075/ijRWCMLX7_AaELOWssYD'
-          });
-      }
-  </script>
-  <!-- FIN DEL EVENTO -->
+  gtag('config', 'AW-952929075'); 
+</script>
+
+<!-- AQUI VA TU FUNCIÓN CON DELAY -->
+<script>
+function registrarConversion(urlDestino) {
+    gtag('event', 'conversion', {
+        'send_to': 'AW-952929075/ijRWCMLX7_AaELOWssYD'
+    });
+
+    setTimeout(function() {
+        if (urlDestino) {
+            window.location.href = urlDestino;
+        }
+    }, 350);
+}
+</script>
+<!-- FIN DEL EVENTO -->
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -206,9 +214,8 @@
         Solo necesitamos su recibo de luz para comenzar a ahorrar.
     </p>
     <div style="margin-top: 10px;">
-<a class="main_bt" 
-   onclick="registrarConversion()"
-   href="https://wa.me/524422333003?text=Hola%2C%20quiero%20más%20información%20sobre%20las%20luminarias.">
+<a class="main_bt"
+   onclick="registrarConversion('https://wa.me/524422333003?text=Hola%2C%20quiero%20más%20información%20sobre%20las%20luminarias.')">
    📲 WhatsApp
 </a>
     </div>
@@ -324,8 +331,7 @@
                 </div>   
                 <div class="full margin_top_30">
 <a class="main_bt"
-   onclick="registrarConversion()"
-   href="https://wa.me/524422333003?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20sus%20productos%20de%20iluminación.">
+   onclick="registrarConversion('https://wa.me/524422333003?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20sus%20productos%20de%20iluminación.')">
    WhatsApp
 </a>
 
