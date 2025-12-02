@@ -16,7 +16,8 @@
   <meta name="geo.position" content="19.4326;-99.1332">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://panelessolaresmexico.com.mx/">
+  <link rel="canonical" href="https://luminarias.com.mx/">
+
 
   <!-- Open Graph -->
   <meta property="og:title" content="Paneles Solares para Empresas en México | Ahorro Energético Garantizado" />
@@ -43,15 +44,22 @@
       gtag('config', 'AW-952929075');
   </script>
 
-  <!-- EVENTO DE CONVERSIÓN CORRECTO -->
-  <script>
-      function registrarConversion() {
-          gtag('event', 'conversion', {
-              'send_to': 'AW-952929075/ijRWCMLX7_AaELOWssYD'
-          });
-      }
-  </script>
-  <!-- FIN DEL EVENTO -->
+<script>
+function registrarConversion(url) {
+  var callback = function () {
+    if (typeof(url) !== 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-952929075/lYzyCKOSq8obELOWssYD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -207,8 +215,8 @@
     </p>
     <div style="margin-top: 10px;">
 <a class="main_bt" 
-   onclick="registrarConversion()"
-   href="https://wa.me/524422333003?text=Hola%2C%20quiero%20más%20información%20sobre%20las%20luminarias.">
+   href="#"
+   onclick="registrarConversion('https://wa.me/524422333003?text=Hola%2C%20quiero%20más%20información%20sobre%20las%20luminarias.'); return false;">
    📲 WhatsApp
 </a>
     </div>
@@ -324,8 +332,8 @@
                 </div>   
                 <div class="full margin_top_30">
 <a class="main_bt"
-   onclick="registrarConversion()"
-   href="https://wa.me/524422333003?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20sus%20productos%20de%20iluminación.">
+   href="#"
+   onclick="registrarConversion('https://wa.me/524422333003?text=Hola%2C%20me%20interesa%20más%20información%20sobre%20sus%20productos%20de%20iluminación.'); return false;">
    WhatsApp
 </a>
 
@@ -573,6 +581,20 @@
   function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'AW-952929075');
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+    el.addEventListener("click", function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-952929075/lYzyCKOSq8obELOWssYD'
+      });
+    });
+  });
+});
+</script>
+
+
 
   // Función para registrar la conversión
   function registrarConversion() {
